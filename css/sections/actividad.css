@@ -1,0 +1,166 @@
+/* ============================================
+   ACTIVIDAD.CSS - Actividad Reciente (Instagram Style)
+   ============================================ */
+
+.activity-section { 
+  background: transparent;
+  position: relative;
+}
+
+.activity-wrapper {
+  position: relative;
+  overflow: hidden;
+  padding: 0;
+}
+
+.activity-grid {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 15px 5px;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.activity-grid::-webkit-scrollbar {
+  display: none;
+}
+
+/* CARDS ESTILO INSTAGRAM - CÍRCULOS */
+.activity-mini-card {
+  min-width: 100px;
+  max-width: 100px;
+  flex-shrink: 0;
+  text-align: center;
+  position: relative;
+  transition: all 0.3s;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.activity-mini-card:hover .activity-circle {
+  transform: scale(1.08);
+}
+
+/* CÍRCULO PRINCIPAL CON GRADIENTE */
+.activity-circle {
+  width: 85px;
+  height: 85px;
+  border-radius: 50%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  padding: 4px;
+}
+
+.activity-circle::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  padding: 3px;
+  background: #CCFF00;
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  z-index: 0;
+}
+
+/* GRADIENTES POR TIPO DE ACTIVIDAD */
+.activity-mini-card.hot .activity-circle::before { background: #CCFF00; }
+.activity-mini-card.achievement .activity-circle::before { background: #CCFF00; }
+.activity-mini-card.streak .activity-circle::before { background: #CCFF00; }
+.activity-mini-card.milestone .activity-circle::before { background: #CCFF00; }
+.activity-mini-card.match .activity-circle::before { background: #CCFF00; }
+.activity-mini-card.cold .activity-circle::before { background: #CCFF00; }
+.activity-mini-card.record .activity-circle::before { background: #CCFF00; }
+.activity-mini-card.new .activity-circle::before { background: #CCFF00; }
+
+/* CONTENIDO INTERNO DEL CÍRCULO */
+.activity-circle-inner {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+}
+
+.activity-mini-card.hot .activity-circle-inner { 
+  background: linear-gradient(135deg, #FF6B6B 0%, #FF8E53 100%); 
+}
+.activity-mini-card.achievement .activity-circle-inner { 
+  background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%); 
+}
+.activity-mini-card.streak .activity-circle-inner { 
+  background: linear-gradient(135deg, #2ECC71 0%, #27AE60 100%); 
+}
+.activity-mini-card.milestone .activity-circle-inner { 
+  background: linear-gradient(135deg, #3498DB 0%, #2980B9 100%); 
+}
+.activity-mini-card.match .activity-circle-inner { 
+  background: linear-gradient(135deg, #9B59B6 0%, #8E44AD 100%); 
+}
+.activity-mini-card.cold .activity-circle-inner { 
+  background: linear-gradient(135deg, #74B9FF 0%, #A29BFE 100%); 
+}
+.activity-mini-card.record .activity-circle-inner { 
+  background: linear-gradient(135deg, #F39C12 0%, #E67E22 100%); 
+}
+.activity-mini-card.new .activity-circle-inner { 
+  background: linear-gradient(135deg, #1ABC9C 0%, #16A085 100%); 
+}
+
+/* ICONO Y VALOR DENTRO DEL CÍRCULO */
+.mini-icon { 
+  font-size: 28px; 
+  margin-bottom: 2px;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2)); 
+}
+
+.mini-value { 
+  font-size: 18px; 
+  font-weight: 900; 
+  color: white; 
+  text-shadow: 0 2px 4px rgba(0,0,0,0.3); 
+  line-height: 1;
+}
+
+/* NOMBRE DEL JUGADOR DEBAJO DEL CÍRCULO */
+.mini-player { 
+  font-size: 13px; 
+  font-weight: 600; 
+  color: #2C3E50; 
+  line-height: 1.2;
+  max-width: 100px;
+  word-wrap: break-word;
+  text-align: center;
+}
+
+/* DESCRIPCIÓN DE LA ACTIVIDAD */
+.mini-label { 
+  font-size: 11px; 
+  font-weight: 600; 
+  color: #7F8C8D; 
+  text-transform: uppercase; 
+  letter-spacing: 0.3px;
+  line-height: 1;
+}
+
+/* TIEMPO TRANSCURRIDO */
+.mini-time { 
+  font-size: 10px; 
+  color: #95A5A6; 
+  font-weight: 500; 
+}
