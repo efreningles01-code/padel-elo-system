@@ -1,0 +1,543 @@
+<div class="padel-app">
+  <div class="app-container">
+    
+    <div class="main-content">
+      <!-- Header -->
+      <header class="header">
+        <nav class="nav-menu">
+          
+          <a class="nav-item active">
+            <svg class="nav-icon" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M19 5h-2V3H7v2H5c-1.1 0-2 .9-2 2v1c0 2.55 1.92 4.63 4.39 4.94.63 1.5 1.98 2.63 3.61 2.96V19H7v2h10v-2h-4v-3.1c1.63-.33 2.98-1.46 3.61-2.96C19.08 12.63 21 10.55 21 8V7c0-1.1-.9-2-2-2zM5 8V7h2v3.82C5.84 10.4 5 9.3 5 8zm14 0c0 1.3-.84 2.4-2 2.82V7h2v1z"/>
+            </svg>
+            <span class="nav-label">Actividades</span>
+          </a>
+          
+          <a class="nav-item">
+            <svg class="nav-icon" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/>
+            </svg>
+            <span class="nav-label">Jugadores</span>
+          </a>
+          
+          <a class="nav-item">
+            <svg class="nav-icon" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M19.14 12.94c.04-.3.06-.61.06-.94 0-.32-.02-.64-.07-.94l2.03-1.58c.18-.14.23-.41.12-.61l-1.92-3.32c-.12-.22-.37-.29-.59-.22l-2.39.96c-.5-.38-1.03-.7-1.62-.94l-.36-2.54c-.04-.24-.24-.41-.48-.41h-3.84c-.24 0-.43.17-.47.41l-.36 2.54c-.59.24-1.13.57-1.62.94l-2.39-.96c-.22-.08-.47 0-.59.22L2.74 8.87c-.12.21-.08.47.12.61l2.03 1.58c-.05.3-.09.63-.09.94s.02.64.07.94l-2.03 1.58c-.18.14-.23.41-.12.61l1.92 3.32c.12.22.37.29.59.22l2.39-.96c.5.38 1.03.7 1.62.94l.36 2.54c.05.24.24.41.48.41h3.84c.24 0 .44-.17.47-.41l.36-2.54c.59-.24 1.13-.56 1.62-.94l2.39.96c.22.08.47 0 .59-.22l1.92-3.32c.12-.22.07-.47-.12-.61l-2.01-1.58zM12 15.6c-1.98 0-3.6-1.62-3.6-3.6s1.62-3.6 3.6-3.6 3.6 1.62 3.6 3.6-1.62 3.6-3.6 3.6z"/>
+            </svg>
+            <span class="nav-label">Configuración</span>
+          </a>
+          
+        </nav>
+      </header>
+
+      <div class="content">
+
+        <!-- ACTIVIDAD RECIENTE -->
+        <section class="activity-section">
+          <h2 class="section-title">📰 Actividad Reciente</h2>
+          
+          <div class="activity-wrapper">
+            <button class="carousel-arrow left" id="activityArrowLeft" onclick="scrollActivity('left')">‹</button>
+            <button class="carousel-arrow right" id="activityArrowRight" onclick="scrollActivity('right')">›</button>
+            
+            <div class="activity-grid" id="activityCarousel">
+              
+              <div class="activity-mini-card hot">
+                <div class="activity-circle">
+                  <div class="activity-circle-inner">
+                    <div class="mini-icon">🔥</div>
+                    <div class="mini-value">+25</div>
+                  </div>
+                </div>
+                <div class="mini-player">Raúl García</div>
+                <div class="mini-label">ELO</div>
+                <div class="mini-time">2h</div>
+              </div>
+              
+              <div class="activity-mini-card achievement">
+                <div class="activity-circle">
+                  <div class="activity-circle-inner">
+                    <div class="mini-icon">👑</div>
+                    <div class="mini-value">#1</div>
+                  </div>
+                </div>
+                <div class="mini-player">Juan Pérez</div>
+                <div class="mini-label">Rank</div>
+                <div class="mini-time">5h</div>
+              </div>
+              
+              <div class="activity-mini-card streak">
+                <div class="activity-circle">
+                  <div class="activity-circle-inner">
+                    <div class="mini-icon">📈</div>
+                    <div class="mini-value">5W</div>
+                  </div>
+                </div>
+                <div class="mini-player">Ana Martínez</div>
+                <div class="mini-label">Racha</div>
+                <div class="mini-time">1d</div>
+              </div>
+              
+              <div class="activity-mini-card milestone">
+                <div class="activity-circle">
+                  <div class="activity-circle-inner">
+                    <div class="mini-icon">⭐</div>
+                    <div class="mini-value">1650</div>
+                  </div>
+                </div>
+                <div class="mini-player">Pedro López</div>
+                <div class="mini-label">Max ELO</div>
+                <div class="mini-time">1d</div>
+              </div>
+              
+              <div class="activity-mini-card match">
+                <div class="activity-circle">
+                  <div class="activity-circle-inner">
+                    <div class="mini-icon">🎾</div>
+                    <div class="mini-value">#10</div>
+                  </div>
+                </div>
+                <div class="mini-player">Luis García</div>
+                <div class="mini-label">Reta</div>
+                <div class="mini-time">2d</div>
+              </div>
+              
+              <div class="activity-mini-card cold">
+                <div class="activity-circle">
+                  <div class="activity-circle-inner">
+                    <div class="mini-icon">❄️</div>
+                    <div class="mini-value">-3</div>
+                  </div>
+                </div>
+                <div class="mini-player">María González</div>
+                <div class="mini-label">Racha</div>
+                <div class="mini-time">3d</div>
+              </div>
+        
+              <div class="activity-mini-card record">
+                <div class="activity-circle">
+                  <div class="activity-circle-inner">
+                    <div class="mini-icon">🏆</div>
+                    <div class="mini-value">15-0</div>
+                  </div>
+                </div>
+                <div class="mini-player">Carlos Ruiz</div>
+                <div class="mini-label">Récord</div>
+                <div class="mini-time">3d</div>
+              </div>
+        
+              <div class="activity-mini-card new">
+                <div class="activity-circle">
+                  <div class="activity-circle-inner">
+                    <div class="mini-icon">✨</div>
+                    <div class="mini-value">New</div>
+                  </div>
+                </div>
+                <div class="mini-player">Sofía Herrera</div>
+                <div class="mini-label">Jugador</div>
+                <div class="mini-time">4d</div>
+              </div>
+        
+              <div class="activity-mini-card milestone">
+                <div class="activity-circle">
+                  <div class="activity-circle-inner">
+                    <div class="mini-icon">💯</div>
+                    <div class="mini-value">100</div>
+                  </div>
+                </div>
+                <div class="mini-player">Diego Morales</div>
+                <div class="mini-label">Partidos</div>
+                <div class="mini-time">5d</div>
+              </div>
+        
+              <div class="activity-mini-card achievement">
+                <div class="activity-circle">
+                  <div class="activity-circle-inner">
+                    <div class="mini-icon">🎖️</div>
+                    <div class="mini-value">Top 5</div>
+                  </div>
+                </div>
+                <div class="mini-player">Laura Sánchez</div>
+                <div class="mini-label">Ascenso</div>
+                <div class="mini-time">6d</div>
+              </div>
+              
+            </div>
+          </div>
+        </section>
+
+        <!-- TOP JUGADORES -->
+        <section class="podium-section">
+          <h2 class="section-title">🏆 Top Jugadores</h2>
+          
+          <div class="podium-wrapper">
+            <button class="carousel-arrow left" id="podiumArrowLeft" onclick="scrollPodium('left')">‹</button>
+            <button class="carousel-arrow right" id="podiumArrowRight" onclick="scrollPodium('right')">›</button>
+            
+            <div class="podium-carousel" id="podiumCarousel">
+              
+              <!-- #1 -->
+              <div class="podium-card first">
+                <div class="rank">#1</div>
+                <div class="avatar">J</div>
+                <h3>Juan Pérez</h3>
+                <div class="elo">⭐ 1621</div>
+                <div class="elo-bar-container">
+                  <div class="elo-bar" style="width: 95%;"></div>
+                </div>
+                <div class="win-rate">82% Win</div>
+                <div class="record">18G - 4P</div>
+                <div class="badge">🥇</div>
+              </div>
+              
+              <!-- #2 -->
+              <div class="podium-card second">
+                <div class="rank">#2</div>
+                <div class="avatar">P</div>
+                <h3>Pedro López</h3>
+                <div class="elo">⭐ 1589</div>
+                <div class="elo-bar-container">
+                  <div class="elo-bar" style="width: 82%;"></div>
+                </div>
+                <div class="win-rate">71% Win</div>
+                <div class="record">15G - 6P</div>
+                <div class="badge">🥈</div>
+              </div>
+              
+              <!-- #3 -->
+              <div class="podium-card third">
+                <div class="rank">#3</div>
+                <div class="avatar">L</div>
+                <h3>Luis García</h3>
+                <div class="elo">⭐ 1543</div>
+                <div class="elo-bar-container">
+                  <div class="elo-bar" style="width: 68%;"></div>
+                </div>
+                <div class="win-rate">57% Win</div>
+                <div class="record">12G - 9P</div>
+                <div class="badge">🥉</div>
+              </div>
+          
+              <!-- #4 -->
+              <div class="podium-card fourth">
+                <div class="rank">#4</div>
+                <div class="avatar">C</div>
+                <h3>Carlos Ruiz</h3>
+                <div class="elo">1512</div>
+                <div class="elo-bar-container">
+                  <div class="elo-bar" style="width: 58%;"></div>
+                </div>
+                <div class="win-rate">52% Win</div>
+                <div class="record">11G - 10P</div>
+              </div>
+          
+              <!-- #5 -->
+              <div class="podium-card fifth">
+                <div class="rank">#5</div>
+                <div class="avatar">A</div>
+                <h3>Ana Martínez</h3>
+                <div class="elo">1487</div>
+                <div class="elo-bar-container">
+                  <div class="elo-bar" style="width: 50%;"></div>
+                </div>
+                <div class="win-rate">48% Win</div>
+                <div class="record">10G - 11P</div>
+              </div>
+          
+              <!-- #6 -->
+              <div class="podium-card fourth">
+                <div class="rank">#6</div>
+                <div class="avatar">M</div>
+                <h3>María González</h3>
+                <div class="elo">1465</div>
+                <div class="elo-bar-container">
+                  <div class="elo-bar" style="width: 42%;"></div>
+                </div>
+                <div class="win-rate">43% Win</div>
+                <div class="record">9G - 12P</div>
+              </div>
+          
+              <!-- #7 -->
+              <div class="podium-card fourth">
+                <div class="rank">#7</div>
+                <div class="avatar">J</div>
+                <h3>José Ramírez</h3>
+                <div class="elo">1445</div>
+                <div class="elo-bar-container">
+                  <div class="elo-bar" style="width: 35%;"></div>
+                </div>
+                <div class="win-rate">38% Win</div>
+                <div class="record">8G - 13P</div>
+              </div>
+          
+              <!-- #8 -->
+              <div class="podium-card fourth">
+                <div class="rank">#8</div>
+                <div class="avatar">R</div>
+                <h3>Roberto Torres</h3>
+                <div class="elo">1421</div>
+                <div class="elo-bar-container">
+                  <div class="elo-bar" style="width: 28%;"></div>
+                </div>
+                <div class="win-rate">33% Win</div>
+                <div class="record">7G - 14P</div>
+              </div>
+          
+              <!-- #9 -->
+              <div class="podium-card fourth">
+                <div class="rank">#9</div>
+                <div class="avatar">L</div>
+                <h3>Laura Sánchez</h3>
+                <div class="elo">1398</div>
+                <div class="elo-bar-container">
+                  <div class="elo-bar" style="width: 20%;"></div>
+                </div>
+                <div class="win-rate">29% Win</div>
+                <div class="record">6G - 15P</div>
+              </div>
+              
+            </div>
+          </div>
+        </section>
+
+        <!-- TABLA COMPLETA -->
+        <section class="ranking-section">
+          <h2 class="section-title">🎾 Todos los jugadores</h2>
+          
+          <div class="ranking-wrapper">
+            <div class="table-container">
+              <table>
+                <thead>
+                  <tr>
+                    <th class="col-rank">#</th>
+                    <th class="col-name">Nombre</th>
+                    <th class="col-time">Tiempo</th>
+                    <th class="col-elo">ELO</th>
+                    <th class="col-elo-bar">Progreso</th>
+                    <th class="col-partidos">Partidos</th>
+                    <th class="col-ganados">Ganados</th>
+                    <th class="col-perdidos">Perdidos</th>
+                    <th class="col-winrate">Win%</th>
+                    <th class="col-retas">Retas</th>
+                    <th class="col-games">Games</th>
+                    <th class="col-estado">Estado</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="col-rank">1</td>
+                    <td class="col-name">
+                      <div class="player-name">
+                        <div class="player-avatar">J</div>
+                        <span>Juan Pérez</span>
+                      </div>
+                    </td>
+                    <td class="col-time">3 meses</td>
+                    <td class="col-elo"><span class="elo-value">1621</span></td>
+                    <td class="col-elo-bar">
+                      <div class="elo-bar-container-table">
+                        <div class="elo-bar-table" style="width: 95%;"></div>
+                      </div>
+                    </td>
+                    <td class="col-partidos">22</td>
+                    <td class="col-ganados">18</td>
+                    <td class="col-perdidos">4</td>
+                    <td class="col-winrate">82%</td>
+                    <td class="col-retas">3</td>
+                    <td class="col-games">112-74</td>
+                    <td class="col-estado"><span class="status-dot">🟢</span></td>
+                  </tr>
+                  <tr>
+                    <td class="col-rank">2</td>
+                    <td class="col-name">
+                      <div class="player-name">
+                        <div class="player-avatar">P</div>
+                        <span>Pedro López</span>
+                      </div>
+                    </td>
+                    <td class="col-time">2 meses</td>
+                    <td class="col-elo"><span class="elo-value">1589</span></td>
+                    <td class="col-elo-bar">
+                      <div class="elo-bar-container-table">
+                        <div class="elo-bar-table" style="width: 82%;"></div>
+                      </div>
+                    </td>
+                    <td class="col-partidos">21</td>
+                    <td class="col-ganados">15</td>
+                    <td class="col-perdidos">6</td>
+                    <td class="col-winrate">71%</td>
+                    <td class="col-retas">3</td>
+                    <td class="col-games">98-78</td>
+                    <td class="col-estado"><span class="status-dot">🟢</span></td>
+                  </tr>
+                  <tr>
+                    <td class="col-rank">3</td>
+                    <td class="col-name">
+                      <div class="player-name">
+                        <div class="player-avatar">L</div>
+                        <span>Luis García</span>
+                      </div>
+                    </td>
+                    <td class="col-time">2 meses</td>
+                    <td class="col-elo"><span class="elo-value">1543</span></td>
+                    <td class="col-elo-bar">
+                      <div class="elo-bar-container-table">
+                        <div class="elo-bar-table" style="width: 68%;"></div>
+                      </div>
+                    </td>
+                    <td class="col-partidos">21</td>
+                    <td class="col-ganados">12</td>
+                    <td class="col-perdidos">9</td>
+                    <td class="col-winrate">57%</td>
+                    <td class="col-retas">2</td>
+                    <td class="col-games">88-82</td>
+                    <td class="col-estado"><span class="status-dot">🟢</span></td>
+                  </tr>
+                  <tr>
+                    <td class="col-rank">4</td>
+                    <td class="col-name">
+                      <div class="player-name">
+                        <div class="player-avatar">C</div>
+                        <span>Carlos Ruiz</span>
+                      </div>
+                    </td>
+                    <td class="col-time">3 meses</td>
+                    <td class="col-elo"><span class="elo-value">1512</span></td>
+                    <td class="col-elo-bar">
+                      <div class="elo-bar-container-table">
+                        <div class="elo-bar-table" style="width: 58%;"></div>
+                      </div>
+                    </td>
+                    <td class="col-partidos">21</td>
+                    <td class="col-ganados">11</td>
+                    <td class="col-perdidos">10</td>
+                    <td class="col-winrate">52%</td>
+                    <td class="col-retas">3</td>
+                    <td class="col-games">82-80</td>
+                    <td class="col-estado"><span class="status-dot">🟢</span></td>
+                  </tr>
+                  <tr>
+                    <td class="col-rank">5</td>
+                    <td class="col-name">
+                      <div class="player-name">
+                        <div class="player-avatar">A</div>
+                        <span>Ana Martínez</span>
+                      </div>
+                    </td>
+                    <td class="col-time">2 meses</td>
+                    <td class="col-elo"><span class="elo-value">1487</span></td>
+                    <td class="col-elo-bar">
+                      <div class="elo-bar-container-table">
+                        <div class="elo-bar-table" style="width: 50%;"></div>
+                      </div>
+                    </td>
+                    <td class="col-partidos">21</td>
+                    <td class="col-ganados">10</td>
+                    <td class="col-perdidos">11</td>
+                    <td class="col-winrate">48%</td>
+                    <td class="col-retas">3</td>
+                    <td class="col-games">76-79</td>
+                    <td class="col-estado"><span class="status-dot">🟢</span></td>
+                  </tr>
+                  <tr>
+                    <td class="col-rank">6</td>
+                    <td class="col-name">
+                      <div class="player-name">
+                        <div class="player-avatar">M</div>
+                        <span>María González</span>
+                      </div>
+                    </td>
+                    <td class="col-time">1 mes</td>
+                    <td class="col-elo"><span class="elo-value">1465</span></td>
+                    <td class="col-elo-bar">
+                      <div class="elo-bar-container-table">
+                        <div class="elo-bar-table" style="width: 42%;"></div>
+                      </div>
+                    </td>
+                    <td class="col-partidos">21</td>
+                    <td class="col-ganados">9</td>
+                    <td class="col-perdidos">12</td>
+                    <td class="col-winrate">43%</td>
+                    <td class="col-retas">2</td>
+                    <td class="col-games">71-84</td>
+                    <td class="col-estado"><span class="status-dot">🟡</span></td>
+                  </tr>
+                  <tr>
+                    <td class="col-rank">7</td>
+                    <td class="col-name">
+                      <div class="player-name">
+                        <div class="player-avatar">J</div>
+                        <span>José Ramírez</span>
+                      </div>
+                    </td>
+                    <td class="col-time">3 meses</td>
+                    <td class="col-elo"><span class="elo-value">1445</span></td>
+                    <td class="col-elo-bar">
+                      <div class="elo-bar-container-table">
+                        <div class="elo-bar-table" style="width: 35%;"></div>
+                      </div>
+                    </td>
+                    <td class="col-partidos">21</td>
+                    <td class="col-ganados">8</td>
+                    <td class="col-perdidos">13</td>
+                    <td class="col-winrate">38%</td>
+                    <td class="col-retas">3</td>
+                    <td class="col-games">65-88</td>
+                    <td class="col-estado"><span class="status-dot">🟢</span></td>
+                  </tr>
+                  <tr>
+                    <td class="col-rank">8</td>
+                    <td class="col-name">
+                      <div class="player-name">
+                        <div class="player-avatar">R</div>
+                        <span>Roberto Torres</span>
+                      </div>
+                    </td>
+                    <td class="col-time">1 mes</td>
+                    <td class="col-elo"><span class="elo-value">1421</span></td>
+                    <td class="col-elo-bar">
+                      <div class="elo-bar-container-table">
+                        <div class="elo-bar-table" style="width: 28%;"></div>
+                      </div>
+                    </td>
+                    <td class="col-partidos">21</td>
+                    <td class="col-ganados">7</td>
+                    <td class="col-perdidos">14</td>
+                    <td class="col-winrate">33%</td>
+                    <td class="col-retas">2</td>
+                    <td class="col-games">58-92</td>
+                    <td class="col-estado"><span class="status-dot">⚪</span></td>
+                  </tr>
+                  <tr>
+                    <td class="col-rank">9</td>
+                    <td class="col-name">
+                      <div class="player-name">
+                        <div class="player-avatar">L</div>
+                        <span>Laura Sánchez</span>
+                      </div>
+                    </td>
+                    <td class="col-time">2 meses</td>
+                    <td class="col-elo"><span class="elo-value">1398</span></td>
+                    <td class="col-elo-bar">
+                      <div class="elo-bar-container-table">
+                        <div class="elo-bar-table" style="width: 20%;"></div>
+                      </div>
+                    </td>
+                    <td class="col-partidos">21</td>
+                    <td class="col-ganados">6</td>
+                    <td class="col-perdidos">15</td>
+                    <td class="col-winrate">29%</td>
+                    <td class="col-retas">3</td>
+                    <td class="col-games">52-98</td>
+                    <td class="col-estado"><span class="status-dot">🟢</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+        
+      </div>
+    </div>
+  </div>
+</div>
