@@ -1,0 +1,160 @@
+/* ============================================
+   TOP-JUGADORES.CSS - Carrusel de Top Jugadores
+   ============================================ */
+
+.podium-section {
+  position: relative;
+}
+
+.podium-wrapper {
+  position: relative;
+  overflow: visible;
+  padding: 0;
+}
+
+.podium-carousel {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: nowrap;
+  padding: 10px 5px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.podium-carousel::-webkit-scrollbar {
+  display: none;
+}
+
+/* TODAS LAS CARDS */
+.podium-card {
+  width: 175px;
+  min-width: 175px;
+  background: white;
+  border-radius: 12px;
+  padding: 15px 12px;
+  overflow: visible;
+  text-align: center;
+  position: relative;
+  transition: all 0.3s;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  border: 2px solid #E0E0E0;
+  flex-shrink: 0;
+}
+
+.podium-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+  border-color: #2ECC71;
+}
+
+/* TOP 3 - BORDES FLUORESCENTES */
+.podium-card.first { 
+  border: 2px solid #CCFF00; 
+  background: linear-gradient(135deg, #FFF9E6 0%, #FFF 100%);
+}
+
+.podium-card.second { 
+  border: 2px solid #CCFF00;
+}
+
+.podium-card.third { 
+  border: 2px solid #CCFF00;
+}
+
+/* #4-9 - GRISES */
+.podium-card.fourth,
+.podium-card.fifth {
+  background: #F5F5F5;
+  border: 2px solid #E0E0E0;
+  opacity: 0.7;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  padding: 10px 12px;
+  font-size: 0.9em;
+}
+
+.podium-card.fourth h3,
+.podium-card.fifth h3,
+.podium-card.fourth .elo,
+.podium-card.fifth .elo,
+.podium-card.fourth .win-rate,
+.podium-card.fifth .win-rate,
+.podium-card.fourth .record,
+.podium-card.fifth .record {
+  color: #7F8C8D;
+}
+
+.podium-card.fourth:hover,
+.podium-card.fifth:hover {
+  transform: translateY(-3px);
+  opacity: 0.85;
+}
+
+/* AVATARES GRISES PARA #4-9 */
+.podium-card.fourth .avatar,
+.podium-card.fifth .avatar {
+  width: 45px;
+  height: 45px;
+  font-size: 20px;
+  background: linear-gradient(135deg, #95A5A6 0%, #7F8C8D 100%);
+}
+
+/* ELEMENTOS DE LA CARD */
+.rank { 
+  font-size: 14px; 
+  font-weight: 700; 
+  color: #95A5A6; 
+  margin-bottom: 8px; 
+}
+
+.podium-card h3 { 
+  font-size: 14px; 
+  font-weight: 700; 
+  margin-bottom: 8px; 
+}
+
+.elo { 
+  font-size: 18px; 
+  font-weight: 800; 
+  color: #F39C12; 
+  margin-bottom: 6px; 
+}
+
+/* BARRAS DE COLORES PARA TOP 3 */
+.podium-card.first .elo-bar { 
+  background: linear-gradient(90deg, #2ECC71 0%, #27AE60 100%); 
+}
+
+.podium-card.second .elo-bar { 
+  background: linear-gradient(90deg, #3498DB 0%, #2980B9 100%); 
+}
+
+.podium-card.third .elo-bar { 
+  background: linear-gradient(90deg, #F39C12 0%, #E67E22 100%); 
+}
+
+.podium-card.fourth .elo-bar,
+.podium-card.fifth .elo-bar { 
+  background: #BDC3C7; 
+}
+
+.win-rate { 
+  font-size: 13px; 
+  font-weight: 600; 
+  color: #2ECC71; 
+  margin-bottom: 6px; 
+}
+
+.record { 
+  font-size: 11px; 
+  color: #7F8C8D; 
+  margin-bottom: 6px; 
+}
+
+.racha { 
+  font-size: 12px; 
+  font-weight: 600; 
+}
