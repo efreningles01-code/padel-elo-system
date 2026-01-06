@@ -1,0 +1,276 @@
+/* ============================================
+   RESPONSIVE.CSS - Estilos para Móvil
+   ============================================ */
+
+/* MÓVIL / TABLET */
+@media (max-width: 768px) {
+  /* CONTENT PRINCIPAL */
+  .content { 
+    margin-top: 105px;
+    padding: 15px 10px;
+  }
+
+  /* SECCIONES - AJUSTAR ESPACIADO */
+  .activity-section {
+    padding: 0 15px;
+    margin-bottom: 2px;
+  }
+
+  .podium-section,
+  .ranking-section {
+    padding: 0 15px;
+    margin-bottom: 30px;
+  }
+
+  .section-title {
+    font-size: 18px;
+    margin-bottom: 15px;
+  }
+
+  /* HEADER - MÁS COMPACTO */
+  .header {
+    padding: 10px 15px;
+  }
+
+  .nav-item {
+    padding: 6px 12px;
+  }
+
+  .nav-icon {
+    width: 22px;
+    height: 22px;
+  }
+
+  .nav-label {
+    font-size: 11px;
+  }
+
+  /* ACTIVIDAD RECIENTE */
+  .activity-grid {
+    gap: 15px;
+    padding: 10px 5px;
+    justify-content: flex-start;
+    align-items: stretch;
+  }
+
+  .activity-mini-card {
+    min-width: 80px;
+    max-width: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 6px;
+  }
+
+  .activity-circle {
+    width: 70px;
+    height: 70px;
+    flex-shrink: 0;
+  }
+
+  .mini-icon {
+    font-size: 24px;
+  }
+
+  .mini-value {
+    font-size: 16px;
+  }
+
+  .mini-player {
+    font-size: 12px;
+    max-width: 80px;
+    line-height: 1.2;
+    min-height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .mini-label {
+    font-size: 10px;
+    line-height: 1;
+  }
+
+  .mini-time {
+    font-size: 9px;
+    line-height: 1;
+  }
+
+  /* OCULTAR FLECHAS EN MÓVIL */
+  .carousel-arrow {
+    display: none !important;
+  }
+
+  /* TOP JUGADORES - CARRUSEL HORIZONTAL */
+  .podium-wrapper {
+    padding: 0;
+    overflow: visible;
+  }
+
+  .podium-carousel {
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: stretch;
+    gap: 8px;
+    padding: 10px 5px 10px 0;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
+  }
+
+  .podium-card {
+    width: 40%;
+    max-width: none;
+    min-width: auto;
+    flex-shrink: 0;
+    scroll-snap-align: start;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* OCULTAR BARRA DE PROGRESO */
+  .elo-bar-container {
+    display: none;
+  }
+
+  .podium-card.first {
+    margin-left: 0 !important;
+  }
+
+  /* CARDS GRISES */
+  .podium-card.fourth,
+  .podium-card.fifth {
+    padding: 10px 12px;
+    font-size: 0.95em;
+  }
+
+  .podium-card.fourth .avatar,
+  .podium-card.fifth .avatar {
+    width: 45px;
+    height: 45px;
+    font-size: 20px;
+  }
+
+  /* TABLA */
+  .table-container {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  table {
+    min-width: 800px;
+  }
+
+  /* QUITAR HOVERS */
+  tbody tr:hover,
+  th:hover {
+    transform: none;
+    box-shadow: none;
+  }
+
+  /* FILAS */
+  tr { height: 55px; }
+  th { height: 45px; padding: 10px 8px; font-size: 12px; }
+  td { padding: 12px 8px; font-size: 13px; }
+
+  /* AVATARES TABLA */
+  .player-avatar {
+    width: 30px;
+    height: 30px;
+    font-size: 12px;
+  }
+
+  .player-name {
+    font-size: 13px;
+    gap: 8px;
+  }
+
+  /* VALORES */
+  .elo-value { font-size: 14px; }
+  .col-winrate { font-size: 13px; }
+
+  .elo-bar-container-table {
+    height: 6px;
+  }
+
+  .badge {
+    font-size: 24px;
+    top: -6px;
+    right: -6px;
+  }
+
+  /* COLUMNAS */
+  .col-rank { width: 40px; }
+  .col-name { width: 140px; min-width: 120px; }
+  .col-time { width: 80px; }
+  .col-elo { width: 60px; }
+  .col-elo-bar { width: 80px; }
+  .col-partidos,
+  .col-ganados,
+  .col-perdidos,
+  .col-winrate { width: 60px; }
+  .col-retas { width: 50px; }
+  .col-games { width: 80px; font-size: 12px; }
+  .col-estado { width: 50px; }
+
+  .status-dot { font-size: 16px; }
+}
+
+/* MÓVIL EXTRA PEQUEÑO */
+@media (max-width: 480px) {
+  .content {
+    padding: 10px 5px;
+  }
+
+  .activity-section,
+  .podium-section,
+  .ranking-section {
+    padding: 0 10px;
+  }
+
+  .section-title {
+    font-size: 16px;
+  }
+
+  /* ACTIVIDAD */
+  .activity-mini-card {
+    min-width: 70px;
+    max-width: 70px;
+    display: flex;
+    flex-direction: column;
+    height: 145px;
+    justify-content: flex-start;
+  }
+
+  .activity-circle {
+    width: 60px;
+    height: 60px;
+  }
+
+  .mini-icon { font-size: 20px; }
+  .mini-value { font-size: 14px; }
+  .mini-player {
+    font-size: 11px;
+    max-width: 70px;
+  }
+
+  /* TOP JUGADORES */
+  .podium-card {
+    width: 40%;
+    padding: 12px 10px;
+  }
+
+  .avatar {
+    width: 45px;
+    height: 45px;
+    font-size: 20px;
+  }
+
+  .podium-card h3 { font-size: 13px; }
+  .elo { font-size: 16px; }
+
+  /* TABLA */
+  th { padding: 8px 6px; font-size: 11px; }
+  td { padding: 10px 6px; font-size: 12px; }
+}
