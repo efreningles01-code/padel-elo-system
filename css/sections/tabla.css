@@ -1,1 +1,177 @@
+/* ============================================
+   TABLA.CSS - Tabla de Ranking Completa
+   ============================================ */
 
+.ranking-section {
+  position: relative;
+}
+
+.ranking-wrapper {
+  position: relative;
+  padding: 0;
+}
+
+/* TABLE CONTAINER */
+.table-container { 
+  background: white; 
+  border-radius: 12px; 
+  overflow: hidden; 
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08); 
+}
+
+/* TABLE */
+table { 
+  width: 100%; 
+  border-collapse: separate;
+  border-spacing: 0;
+  table-layout: fixed; 
+}
+
+/* HEADER */
+th { 
+  background: linear-gradient(135deg, #2C3E50 0%, #34495E 100%);
+  color: white; 
+  padding: 12px 12px;
+  text-align: left; 
+  font-weight: 600; 
+  font-size: 13px; 
+  cursor: pointer; 
+  user-select: none; 
+  white-space: nowrap;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  transition: all 0.3s;
+  height: 50px;
+}
+
+th:hover { 
+  background: linear-gradient(135deg, #34495E 0%, #3d566e 100%);
+  transform: translateY(-2px);
+}
+
+th:first-child {
+  border-top-left-radius: 12px;
+}
+
+th:last-child {
+  border-top-right-radius: 12px;
+}
+
+/* FILAS */
+tr {
+  height: 65px;
+  transition: all 0.3s;
+}
+
+/* ZEBRA STRIPING */
+tbody tr:nth-child(odd) {
+  background: #FAFAFA;
+}
+
+tbody tr:nth-child(even) {
+  background: white;
+}
+
+/* TOP 3 DESTACADO */
+tbody tr:nth-child(1) {
+  background: linear-gradient(90deg, #FFF9E6 0%, #FFFEF8 100%);
+  border-left: 4px solid #CCFF00;
+}
+
+tbody tr:nth-child(2) {
+  background: linear-gradient(90deg, #F8F9FA 0%, #FFFFFF 100%);
+  border-left: 4px solid #CCFF00;
+}
+
+tbody tr:nth-child(3) {
+  background: linear-gradient(90deg, #FFF5E6 0%, #FFFEF8 100%);
+  border-left: 4px solid #CCFF00;
+}
+
+/* HOVER */
+tbody tr:hover { 
+  background: #F0F8FF !important;
+  transform: translateX(5px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* CELDAS */
+td { 
+  padding: 20px 12px;
+  border-bottom: 1px solid #ECF0F1; 
+  font-size: 14px; 
+  white-space: nowrap; 
+  overflow: hidden; 
+  text-overflow: ellipsis;
+  transition: all 0.3s;
+}
+
+tr:last-child td { 
+  border-bottom: none; 
+}
+
+/* RANKING CON BADGE */
+.col-rank {
+  width: 60px;
+  text-align: center;
+  font-weight: 700;
+  font-size: 15px;
+}
+
+tbody tr:nth-child(1) .col-rank,
+tbody tr:nth-child(2) .col-rank,
+tbody tr:nth-child(3) .col-rank {
+  color: #CCFF00;
+  font-size: 18px;
+}
+
+/* NOMBRE CON AVATAR */
+.col-name { 
+  width: 180px; 
+  min-width: 160px; 
+}
+
+.player-name { 
+  font-weight: 600; 
+  color: #2C3E50; 
+  white-space: normal;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* AVATARES TOP 3 CON GRADIENTES METÁLICOS */
+tbody tr:nth-child(1) .player-avatar {
+  background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
+}
+
+tbody tr:nth-child(2) .player-avatar {
+  background: linear-gradient(135deg, #C0C0C0 0%, #A8A8A8 100%);
+}
+
+tbody tr:nth-child(3) .player-avatar {
+  background: linear-gradient(135deg, #CD7F32 0%, #B8682A 100%);
+}
+
+/* TIEMPO */
+.col-time { 
+  width: 90px;
+  color: #7F8C8D;
+  font-size: 13px;
+}
+
+/* ELO */
+.col-elo { 
+  width: 80px; 
+  text-align: center; 
+}
+
+.elo-value { 
+  color: #F39C12; 
+  font-weight: 800;
+  font-size: 16px;
+}
+
+/* BARRA DE PROGRESO */
+.col-elo-bar
