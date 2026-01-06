@@ -51,3 +51,35 @@
   --color-red: #E74C3C;
   --color-green: #27AE60;
 }
+
+/* Aislar el look del sistema dentro del contenedor */
+#padel-app-container,
+#padel-app-container * {
+  box-sizing: border-box;
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif !important;
+}
+
+/* Neutralizar cosas típicas de Squarespace */
+#padel-app-container h1,
+#padel-app-container h2,
+#padel-app-container h3,
+#padel-app-container p {
+  margin: 0;
+}
+
+#padel-app-container img,
+#padel-app-container svg {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Tablas */
+#padel-app-container table {
+  border-collapse: collapse;
+  width: 100%;
+}
+#padel-app-container th,
+#padel-app-container td {
+  padding: 10px;
+}
+
